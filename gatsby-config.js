@@ -3,6 +3,7 @@ module.exports = {
     title: `Code with KV`,
     author: 'Karanveer',
     description: `A Programming Blog`,
+    siteUrl: "http://karanveer.net",
     summary: `
     My name is Karanveer. This blog is my effort to explore the craft of programming, and share my ideas with the world.
     I also have a huge interest in drawing and painting and you can find my scribbles on intsagram.
