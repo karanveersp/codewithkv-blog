@@ -1,0 +1,89 @@
+body {
+  --bg: white;
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: #222;
+  --hr: hsla(0, 0%, 0%, 0.2);
+
+  background-color: var(--bg);
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+
+  --bg: #161923;
+  --textNormal: #bcbdcf;
+  --textTitle: #bcbdcf;
+  --textLink: #bcbdcf;
+  --hr: hsla(0, 0%, 100%, 0.2);
+}
+
+.center {
+  text-align: center;
+}
+
+.themeToggler {
+  background: transparent;
+  border-width: 0;
+  color: var(--textNormal);
+  outline: none;
+}
+.gatsby-highlight {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+}
+pre[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+pre[class="language-python"]::before {
+  content: "python";
+  background: #1e415d;
+  color: #dcdcdc;
+}
+pre[class="language-js"]::before {
+  content: "js";
+  background: #fffd80;
+  color: #1d1d1d;
+}
+
+/* post styles */
+.postTitle {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.postBody {
+  margin-top: 2rem;
+  display: block;
+}
+
+.postNavUl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+hr {
+  margin-bottom: 1rem;
+}
+
+.navLink {
+  padding-right: 20px;
+  display: inline-flex;
+  margin-bottom: 1rem;
+}

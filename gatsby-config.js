@@ -1,17 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
-    },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    title: `Code with KV`,
+    author: 'Karanveer',
+    description: `A Programming Blog`,
+    summary: `
+    My name is Karanveer. This blog is my effort to explore the craft of programming, and share my ideas with the world.
+    I also have a huge interest in drawing and painting and you can find my scribbles on intsagram.
+    `,
+    // siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      githubUrl: 'http://github.com/karanveersp',
+      instagramUrl: 'http://instagram.com/karanveer41'
     },
   },
   plugins: [
+    `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -60,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Code with KV`,
+        short_name: `codeWithKV`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

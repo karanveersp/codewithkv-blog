@@ -1,23 +1,33 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import Irving from "typography-theme-irving"
+import "../styles/global.css"
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-  }
-}
+Irving.headerFontFamily = ["Ubuntu"]
+// Styles that have to do with light/dark theme variables
+Irving.overrideStyles = () => ({
+  hr: {
+    background: "var(--hr)",
+  },
+  a: {
+    color: "var(--textLink)",
+  },
+  "h1,h2,h3": {
+    color: "var(--textTitle)",
+  },
+  blockquote: {
+    borderColor: "var(--textNormal)",
+    borderLeft: "3px solid var(--textNormal)",
+    paddingLeft: "15px"
+  },
+})
 
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
+const typography = new Typography(Irving)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
   typography.injectStyles()
 }
 
-export default typography
 export const rhythm = typography.rhythm
 export const scale = typography.scale
+export default typography

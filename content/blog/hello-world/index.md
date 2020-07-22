@@ -1,7 +1,9 @@
 ---
 title: Hello World
+draft: true
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
+tags: ["that"]
 ---
 
 This is my first post on my new fake blog! How exciting!
