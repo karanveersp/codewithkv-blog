@@ -3,6 +3,14 @@ import Irving from "typography-theme-irving"
 import "../styles/global.css"
 
 Irving.headerFontFamily = ["Ubuntu"]
+Irving.googleFonts = [
+  {
+    name: 'Ubuntu',
+    styles: [
+      '500'
+    ]
+  }
+]
 // Styles that have to do with light/dark theme variables
 Irving.overrideStyles = () => ({
   hr: {

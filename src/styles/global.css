@@ -4,8 +4,11 @@ body {
   --textTitle: #222;
   --textLink: #222;
   --hr: hsla(0, 0%, 0%, 0.2);
-
   background-color: var(--bg);
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 body.dark {
@@ -35,6 +38,12 @@ body.dark {
 .gatsby-highlight pre[class*="language-"] {
   -webkit-overflow-scrolling: touch;
 }
+
+.gatsby-highlight {
+  letter-spacing: 0.025rem;
+  margin-bottom: 1em;
+}
+
 pre[class*="language-"]::before {
   background: black;
   border-radius: 0 0 0.25rem 0.25rem;
