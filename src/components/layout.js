@@ -22,7 +22,6 @@ const Layout = ({ location, children }) => {
     }
   `)
   const { author, title } = data.site.siteMetadata
-  const { githubUrl, instagramUrl } = data.site.siteMetadata.social
 
   const rootPath = `${__PATH_PREFIX__}/`
   let header
@@ -79,21 +78,6 @@ const Layout = ({ location, children }) => {
       <main>{children}</main>
       <hr></hr>
       <div className="center">
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          github
-        </a>
-        &nbsp;&bull;&nbsp;
-        <a
-          href={instagramUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          instagram
-        </a>
         <footer>© {author} {new Date().getFullYear()}</footer>
       </div>
     </div>

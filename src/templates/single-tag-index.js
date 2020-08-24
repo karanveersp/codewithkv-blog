@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const SingleTagTemplate = ({ data, pageContext, location }) => {
-  console.log(pageContext)
   const { posts, tag } = pageContext
   return (
       <div>
@@ -12,10 +11,10 @@ const SingleTagTemplate = ({ data, pageContext, location }) => {
       <div>
         <article>
           <header>
-            <h1 className="postTitle">Posts about {tag}</h1>
+            <h1 className="postTitle">{tag} Posts</h1>
           </header>
-          <p className="postBody">
-            <ul>
+          
+            <ul className="postBody">
               {posts.map((post, index) => {
                 return (
                   <li key={index}>
@@ -24,8 +23,6 @@ const SingleTagTemplate = ({ data, pageContext, location }) => {
                 )
               })}
             </ul>
-          </p>
-          <hr/>
         </article>
       </div>
     </Layout>

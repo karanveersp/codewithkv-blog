@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const AllTagsTemplate = ({ data, pageContext, location }) => {
-  console.log(pageContext)
-  console.log(data)
+  // console.log(pageContext)
+  // console.log(data)
   const { tags } = pageContext
 
   return (

@@ -8,7 +8,6 @@ import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
-
   return (
     <Layout location={location}>
       <SEO title="All posts" />
@@ -33,7 +32,21 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
+             
               <small>{node.frontmatter.date}</small>
+              <ul style={{margin: 0}}>
+              {node.frontmatter.tags?.map(tag => {
+                return (
+                  <li key={tag} style={{ display: "inline", marginRight: "1rem"}}>
+                  <small>
+                  <Link to={"/tags/" + tag}>
+                    {tag}
+                  </Link>
+                  </small>
+                  </li>
+                )
+              })}
+              </ul>
             </header>
             <section>
               <p
@@ -72,6 +85,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }

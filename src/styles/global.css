@@ -25,6 +25,11 @@ body.dark {
   text-align: center;
 }
 
+.centerAndBotMargin {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .themeToggler {
   background: transparent;
   border-width: 0;
