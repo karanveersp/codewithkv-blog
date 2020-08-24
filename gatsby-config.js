@@ -5,9 +5,8 @@ module.exports = {
     description: `A Programming Blog`,
     siteUrl: "http://codewithkv.com",
     summary: `
-    My name is Karanveer. This blog is my effort to explore the craft of programming, and share my ideas with the world.
-    I also have a huge interest in drawing and painting and you can find my scribbles on instagram.
-    `,
+    I'm a developer, CS student and artist interested in functional programming and software development.
+    This blog is my effort to explore the craft of programming, and share my ideas with the world.`,
     // siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       githubUrl: 'http://github.com/karanveersp',

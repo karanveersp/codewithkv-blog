@@ -28,7 +28,7 @@ cool_movie = Movie("The Revenant", 2015)
 print(cool_movie)
 ```
 
-```txt
+```
 <__main__.Movie object at 0x7fe3f13bcfa0>
 ```
 
@@ -59,7 +59,7 @@ There's also a `__repr__` method which can be called on objects:
 ```python
 print(cool_movie.__repr__())
 ```
-```txt
+```
 <__main__.Movie object at 0x7fe3f13dd4c0>
 ```
 

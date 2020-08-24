@@ -78,7 +78,10 @@ const Layout = ({ location, children }) => {
       <main>{children}</main>
       <hr></hr>
       <div className="center">
-        <footer>© {author} {new Date().getFullYear()}</footer>
+        <footer><small>© {author} {new Date().getFullYear()}. 
+        Powered by&nbsp;
+        <a href="http://gatsbyjs.org" target="_blank"
+          rel="noreferrer">Gatsby.js</a></small></footer>
       </div>
     </div>
   )
