@@ -2,11 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `Code with KV`,
     author: 'Karanveer',
-    description: `A Programming Blog`,
+    description: `Developer Blog`,
     siteUrl: "http://codewithkv.com",
-    summary: `
-    I'm a developer, CS student and artist interested in functional programming and software development.
-    This blog is my effort to explore the craft of programming, and share my ideas with the world.`,
+    // summary: `
+    // I'm a developer enthusiastic about functional programming, and blockchain tech.
+    // There's a lot of innovation taking place in the realm of blockchain, and this blog is my effort
+    // to share what I learn.`,
     // siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       githubUrl: 'http://github.com/karanveersp',

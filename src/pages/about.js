@@ -8,7 +8,12 @@ const About = props => {
     <div>
       <Layout location={props.location}>
         <h2 className="postTitle">About</h2>
-        <p className="postBody">{props.data.site.siteMetadata.summary}</p>
+        <p className="postBody">
+          Hi, my name is Karanveer.<br/>
+          I'm a developer enthusiastic about functional programming, and blockchain tech.<br/><br/>
+          This blog is my effort to share good knowledge about different programming
+          languages, web development and understanding blockchains.<br/><br/>
+        </p>
       <div className="centerAndBotMargin">
       <a
           href={props.data.site.siteMetadata.social.githubUrl}
@@ -36,7 +41,6 @@ export const pageQuery = graphql`
   query AboutSummary {
     site {
       siteMetadata {
-        summary,
         social {
           githubUrl,
           instagramUrl
