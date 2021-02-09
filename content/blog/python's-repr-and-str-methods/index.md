@@ -6,6 +6,11 @@ description: "Examining object state"
 tags: ["Python", "Beginner"]
 ---
 
+## Table of Contents
+```toc
+```
+<br/>
+
 _Knowledge is power_.
 
 Every programmer comes to appreciate that after doing their share of debugging.

@@ -59,6 +59,13 @@ const Layout = ({ location, children }) => {
       }}
     >
       <div style={{ float: "right" }}>
+        <Link className="navLink" to="/about">
+            About
+          </Link>
+        <Link className="navLink" to="/tags">
+          Tags
+        </Link>
+
         <ThemeToggler>
           {({ theme, toggleTheme }) => (
             <button className="themeToggler"
@@ -73,9 +80,12 @@ const Layout = ({ location, children }) => {
             </button>
           )}
         </ThemeToggler>
+
       </div>
       <header style={{ margin: "auto" }}>{header}</header>
       <main>{children}</main>
+      <br/>
+      <br/>
       <hr></hr>
       <div className="center">
         <footer><small>© {author} {new Date().getFullYear()}. 

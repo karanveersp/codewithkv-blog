@@ -12,12 +12,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="All posts" />
       <Description />
-      <Link className="navLink" to="/about">
-        About
-      </Link>
-      <Link className="navLink" to="/tags">
-        Tags
-      </Link>
+      <br/>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -33,8 +28,10 @@ const BlogIndex = ({ data, location }) => {
                 </Link>
               </h3>
              
-              <small>{node.frontmatter.date}</small>
               <ul style={{margin: 0}}>
+                <li style={{ display: "inline", marginRight: "1rem"}}>
+                <small>{node.frontmatter.date}</small>
+                </li>
               {node.frontmatter.tags?.map(tag => {
                 return (
                   <li key={tag} style={{ display: "inline", marginRight: "1rem"}}>
@@ -48,13 +45,13 @@ const BlogIndex = ({ data, location }) => {
               })}
               </ul>
             </header>
-            <section>
+            {/* <section>
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
-            </section>
+            </section> */}
           </article>
         )
       })}

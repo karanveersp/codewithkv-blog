@@ -20,6 +20,11 @@ def prepareEmptyFile(title, file_path: Path):
         f.write(f'description: ""\n')
         f.write(f"tags: []\n")
         f.write("---\n\n")
+        f.write("\n")
+        f.write("## Table of Contents\n")
+        f.write("```toc\n")
+        f.write("```\n")
+        f.write("<br/>\n\n")
 
 if __name__ == "__main__":
     main()
