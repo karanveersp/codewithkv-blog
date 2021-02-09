@@ -3,12 +3,13 @@ title: Python's repr and str methods
 date: 2020-08-24
 draft: false
 description: "Examining object state"
-tags: ["Python", "Beginner"]
+tags: ["python", "tutorial"]
 ---
 
 ## Table of Contents
 ```toc
 ```
+
 <br/>
 
 _Knowledge is power_.

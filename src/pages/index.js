@@ -45,13 +45,13 @@ const BlogIndex = ({ data, location }) => {
               })}
               </ul>
             </header>
-            {/* <section>
+            <section>
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
-            </section> */}
+            </section>
           </article>
         )
       })}
