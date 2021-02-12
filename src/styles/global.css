@@ -1,9 +1,9 @@
 body {
   --bg: white;
-  --textNormal: #222;
-  --textTitle: #222;
-  --textLink: #222;
-  --sunColor: #222;
+  --textNormal: rgb(83, 83, 83);
+  --textTitle: rgb(0, 52, 65);
+  --textLink: rgb(0, 52, 65);
+  --sunColor: rgb(0, 52, 65);
   --hr: hsla(0, 0%, 0%, 0.2);
   background-color: var(--bg);
 }
