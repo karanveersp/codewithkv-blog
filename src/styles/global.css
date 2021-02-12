@@ -3,6 +3,7 @@ body {
   --textNormal: #222;
   --textTitle: #222;
   --textLink: #222;
+  --sunColor: #222;
   --hr: hsla(0, 0%, 0%, 0.2);
   background-color: var(--bg);
 }
@@ -16,8 +17,9 @@ body.dark {
 
   --bg: #161923;
   --textNormal: #bcbdcf;
-  --textTitle: #bcbdcf;
-  --textLink: #bcbdcf;
+  --textTitle: #c4bfb7;
+  --textLink: #c4bfb7;
+  --sunColor: #c4bfb7;
   --hr: hsla(0, 0%, 100%, 0.2);
 }
 
@@ -33,7 +35,7 @@ body.dark {
 .themeToggler {
   background: transparent;
   border-width: 0;
-  color: var(--textNormal);
+  color: var(--sunColor);
   outline: none;
 }
 .gatsby-highlight {
