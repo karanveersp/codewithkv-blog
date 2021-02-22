@@ -42,6 +42,10 @@ body.dark {
   --hr: hsla(0, 0%, 100%, 0.2);
 }
 
+svg {
+  fill: var(--sunColor);
+}
+
 .center {
   text-align: center;
 }

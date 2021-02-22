@@ -4,6 +4,7 @@ import "../styles/global.css"
 
 Parnassus.headerFontFamily = ["Ubuntu"]
 Parnassus.bodyFontFamily = ["Rubik"]
+Parnassus.baseFontSize = "18px"
 Parnassus.googleFonts = [
   {
     name: 'Ubuntu',
