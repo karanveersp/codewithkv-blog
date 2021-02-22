@@ -9,7 +9,7 @@ const About = props => {
       <Layout location={props.location}>
         <h2 className="postTitle">About</h2>
         <p className="postBody">
-          I'm a developer enthusiastic about programming, and blockchain tech.<br/><br/>
+          I'm a developer enthusiastic about programming, and blockchain tech.<br/>
           This blog is my effort to share good knowledge.<br/><br/>
         </p>
       <div className="centerAndBotMargin">

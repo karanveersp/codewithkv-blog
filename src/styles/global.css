@@ -1,9 +1,11 @@
 body {
   --bg: white;
+  --specialTextBg: rgb(216, 216, 216);
+  --specialTextColor:  rgb(83, 83, 83);
   --textNormal: rgb(83, 83, 83);
-  --textTitle: rgb(0, 52, 65);
-  --textLink: rgb(0, 52, 65);
-  --sunColor: rgb(0, 52, 65);
+  --textTitle: rgb(59, 59, 59);
+  --textLink: rgb(59, 59, 59);
+  --sunColor: rgb(59, 59, 59);
   --hr: hsla(0, 0%, 0%, 0.2);
   background-color: var(--bg);
 }
@@ -12,14 +14,31 @@ p {
   margin-bottom: 1em;
 }
 
+h3 a{
+  text-decoration: none;
+}
+h1 a{
+  text-decoration: none;
+}
+h2 a {
+  text-decoration: none;
+}
+code {
+  background-color: var(--specialTextBg);
+  color: var(--specialTextColor);
+  border-radius: 2px;
+  padding: 2px;
+}
+
 body.dark {
   -webkit-font-smoothing: antialiased;
-
+  --specialTextBg: rgb(51, 51, 51);
+  --specialTextColor:  #bcbdcf;
   --bg: #161923;
   --textNormal: #bcbdcf;
-  --textTitle: #c4bfb7;
-  --textLink: #c4bfb7;
-  --sunColor: #c4bfb7;
+  --textTitle: #bcbdcf;
+  --textLink: #bcbdcf;
+  --sunColor: #bcbdcf;
   --hr: hsla(0, 0%, 100%, 0.2);
 }
 

@@ -12,6 +12,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="All posts" />
       <Description />
+      <hr/>
       <br/>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
@@ -52,6 +53,7 @@ const BlogIndex = ({ data, location }) => {
                 }}
               />
             </section>
+            <br/>
           </article>
         )
       })}
