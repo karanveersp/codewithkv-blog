@@ -41,7 +41,9 @@ body.dark {
   --sunColor: #bcbdcf;
   --hr: hsla(0, 0%, 100%, 0.2);
 }
-
+svg[style] {
+  display: inline in !important;
+}
 svg {
   fill: var(--sunColor);
   height: 20px;
