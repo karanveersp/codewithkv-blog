@@ -44,8 +44,6 @@ body.dark {
 
 svg {
   fill: var(--sunColor);
-  height: 20px;
-  width: 20px;
 }
 
 .center {
