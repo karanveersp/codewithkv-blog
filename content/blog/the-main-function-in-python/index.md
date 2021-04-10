@@ -189,7 +189,7 @@ By this simple change, we can run `other.py` and see the expected output.
 ```python
 # other .py
 import isogram
-print(isogram.is_isogram("Yiri")) # prints True
+print(isogram.is_isogram("Yuri")) # prints True
 ```
 
 <br/>
