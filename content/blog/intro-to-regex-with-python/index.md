@@ -12,10 +12,11 @@ tags: ["python", "tutorial"]
 
 <br/>
 
-Data lives on our computers as files containing byte sequences or strings.
-All automation eventually boils down to operations on data, be it analysis, or data extraction, or transformation.
+This blog post is an introduction to regular expressions using Python. 
 
-Before you can do anything with data, you have to first _identify_ it in a very specific way. Your automation, no matter what its going to do, must first lock onto its data. 
+All programming eventually boils down to operations on data, be it analysis, or data extraction, or transformation.
+
+Before you can do anything with textual data, you have to first _identify_ it in a very specific way. Your program, no matter what its going to do, must first be able to _locate_ specific strings.
 
 You may be trying to identify:
 - whether a specific word is found in a file
@@ -23,17 +24,21 @@ You may be trying to identify:
 - all questions in a file (sentences ending with `?`)
 - all content contained in `<p>` tags in an html file
 
-All of these cases describe some kind of text pattern.
+All of these cases describe some kind of text _pattern_.
 
-Regular expressions are the definition of such patterns which allow you to lock onto any data that _matches_ the pattern.
+Regular expressions are the definition of such patterns which allow you to lock onto any textual data that matches the pattern.
 
 ---
 
 ## Regular Expression Anatomy
 
-The [pythex.org](http://pythex.org) website is a great tool to help build and test regular expressions.
+Regexes are notorious for being arcane and difficult to read. Even simple expressions can look like gibberish at first glance, which is why so many avoid using them altogether. I used to avoid them like the plague when I first learned about them, largely because there wasn't a tool to give me real-time feedback on my regex.
 
-A regular expression is a string where certain characters reflect matching rules.
+Those days are long gone, with the introduction of the [pythex.org](http://pythex.org) website!
+
+This site is a great tool to help build and test regular expressions, because you can reference a cheat sheet and get immediate results on what is being matched.
+
+Here are some basic matching rules we will be using in the demo:
 
 - `.` matches any character
 - `\s` matches any whitespace in the set `[ \t\n\r\f\v ]`

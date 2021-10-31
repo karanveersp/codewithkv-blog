@@ -12,51 +12,59 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="All posts" />
       <Description />
-      <hr/>
-      <br/>
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-             
-              <ul style={{margin: 0}}>
-                <li style={{ display: "inline", marginRight: "1rem"}}>
-                <small>{node.frontmatter.date}</small>
-                </li>
-              {node.frontmatter.tags?.map(tag => {
-                return (
-                  <li key={tag} style={{ display: "inline", marginRight: "1rem"}}>
-                  <small>
-                  <Link to={"/tags/" + tag}>
-                    {tag}
-                  </Link>
-                  </small>
-                  </li>
-                )
-              })}
-              </ul>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-            <br/>
-          </article>
-        )
-      })}
+      <hr />
+      <br />
+
+      <div className="row">
+        <div className="column">
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <article key={node.fields.slug}>
+                <header>
+                  <h3
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                  >
+                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                      {title}
+                    </Link>
+                  </h3>
+
+                  <ul style={{ margin: 0 }}>
+                    <li style={{ display: "inline", marginRight: "1rem" }}>
+                      <small>{node.frontmatter.date}</small>
+                    </li>
+                    {node.frontmatter.tags?.map(tag => {
+                      return (
+                        <li
+                          key={tag}
+                          style={{ display: "inline", marginRight: "1rem" }}
+                        >
+                          <small>
+                            <Link to={"/tags/" + tag}>{tag}</Link>
+                          </small>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </header>
+                {/* <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                </section> */}
+                <br />
+              </article>
+            )
+          })}
+        </div>
+        <div className="column align-right">
+        </div>
+      </div>
     </Layout>
   )
 }

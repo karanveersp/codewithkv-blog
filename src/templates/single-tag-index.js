@@ -11,7 +11,7 @@ const SingleTagTemplate = ({ data, pageContext, location }) => {
       <div>
         <article>
           <header>
-            <h1 className="postTitle">{tag} Posts</h1>
+            <h1 className="postTitle">{tag}</h1>
           </header>
           
             <ul className="postBody">

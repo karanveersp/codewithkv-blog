@@ -4,14 +4,56 @@ body {
   --specialTextColor:  rgb(83, 83, 83);
   --textNormal: rgb(83, 83, 83);
   --textTitle: rgb(59, 59, 59);
-  --textLink: rgb(59, 59, 59);
+  --linkHover: rgb(153, 40, 40);
   --sunColor: rgb(59, 59, 59);
   --hr: hsla(0, 0%, 0%, 0.2);
+  --cardColor: #cbd0df;
   background-color: var(--bg);
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --specialTextBg: rgb(51, 51, 51);
+  --specialTextColor:  #bcbdcf;
+  --bg: #161923;
+  --textNormal: #bcbdcf;
+  --textTitle: #bcbdcf;
+  --linkHover: #2fb8df;
+  --sunColor: #bcbdcf;
+  --cardColor: #363f4d;
+  --hr: hsla(0, 0%, 100%, 0.2);
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.card {
+  background-color: var(--cardColor);
+  border-radius: 12px; /* 5px rounded corners */
+  padding: 20px;
+  width: 50%;
+  margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 p {
   margin-bottom: 1em;
+}
+
+a:hover {
+  color: var(--linkHover);
 }
 
 h3 a{
@@ -23,6 +65,7 @@ h1 a{
 h2 a {
   text-decoration: none;
 }
+
 code {
   background-color: var(--specialTextBg);
   color: var(--specialTextColor);
@@ -30,17 +73,7 @@ code {
   padding: 2px;
 }
 
-body.dark {
-  -webkit-font-smoothing: antialiased;
-  --specialTextBg: rgb(51, 51, 51);
-  --specialTextColor:  #bcbdcf;
-  --bg: #161923;
-  --textNormal: #bcbdcf;
-  --textTitle: #bcbdcf;
-  --textLink: #bcbdcf;
-  --sunColor: #bcbdcf;
-  --hr: hsla(0, 0%, 100%, 0.2);
-}
+
 
 svg {
   fill: var(--sunColor);

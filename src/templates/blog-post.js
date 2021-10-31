@@ -7,7 +7,8 @@ import { scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const { previous, next } = pageContext
+  // console.log(location)
+  // console.log(data)
 
   return (
     <Layout location={location}>
@@ -28,24 +29,15 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
+        <hr />
       </article>
 
       <nav>
         <ul className="postNavUl">
           <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
+            <Link to="/" rel="home">
+              ← home
+            </Link>
           </li>
         </ul>
       </nav>

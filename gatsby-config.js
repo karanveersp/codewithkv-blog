@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Code with KV`,
     author: 'Karanveer',
-    description: `A Dev Blog`,
+    description: `A Dev Blog.`,
     siteUrl: "http://codewithkv.com",
     // summary: `
     // I'm a developer enthusiastic about functional programming, and blockchain tech.

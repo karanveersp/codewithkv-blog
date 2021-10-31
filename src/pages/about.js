@@ -9,8 +9,18 @@ const About = props => {
       <Layout location={props.location}>
         <h2 className="postTitle">About</h2>
         <p className="postBody">
-          I'm a developer enthusiastic about programming, and blockchain tech.<br/>
-          This blog is my effort to share good knowledge.<br/><br/>
+          Hello and welcome to my blog!
+          <br />
+          My name is Karanveer, but you can call me KV.
+          <br />
+          I'm a developer enthusiastic about web, desktop and blockchains apps as well as functional programming.
+          <br />
+          This blog is my effort to explore, organize and share my ideas about code. 
+          <br/>
+          If you'd like to send me a message, please get int touch <a href="mailto: karanveer(at)codewithkv.com">
+            karanveer(at)codewithkv.com
+          </a>
+          .
         </p>
       <div className="centerAndBotMargin">
       <a
@@ -27,6 +37,14 @@ const About = props => {
           rel="noreferrer"
         >
           instagram
+        </a>
+        &nbsp;&bull;&nbsp;
+        <a
+          href="https://wisdominart.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          art blog
         </a>
         </div>
       </Layout>

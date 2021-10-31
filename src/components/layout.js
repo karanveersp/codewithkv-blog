@@ -63,6 +63,9 @@ const Layout = ({ location, children }) => {
         <Link className="navLink" to="/about">
             About
           </Link>
+        <Link className="navLink" to="/projects">
+            Projects
+        </Link>
         <Link className="navLink" to="/tags">
           Tags
         </Link>
