@@ -15,37 +15,37 @@ const About = props => {
           <br />
           I'm a developer enthusiastic about web, desktop and blockchains apps as well as functional programming.
           <br />
-          This blog is my effort to explore, organize and share my ideas about code. 
-          <br/>
-          If you'd like to send me a message, please get int touch <a href="mailto: karanveer(at)codewithkv.com">
+          This blog is my effort to explore, organize and share my ideas about code.
+          <br />
+          You can contact me using <a href="mailto: karanveer(at)codewithkv.com">
             karanveer(at)codewithkv.com
           </a>
           .
         </p>
-      <div className="centerAndBotMargin">
-      <a
-          href={props.data.site.siteMetadata.social.githubUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          github
-        </a>
-        &nbsp;&bull;&nbsp;
-        <a
-          href={props.data.site.siteMetadata.social.instagramUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          instagram
-        </a>
-        &nbsp;&bull;&nbsp;
-        <a
-          href="https://wisdominart.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          art blog
-        </a>
+        <div className="centerAndBotMargin">
+          <a
+            href={props.data.site.siteMetadata.social.githubUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            github
+          </a>
+          &nbsp;&bull;&nbsp;
+          <a
+            href={props.data.site.siteMetadata.social.instagramUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            instagram
+          </a>
+          &nbsp;&bull;&nbsp;
+          <a
+            href="https://wisdominart.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            art blog
+          </a>
         </div>
       </Layout>
       <SEO title="About" description="About KV" />
