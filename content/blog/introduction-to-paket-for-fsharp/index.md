@@ -3,7 +3,7 @@ title: Introduction to Paket for F#
 date: 2021-12-28
 draft: false
 description: ""
-tags: ["F#", "paket", "tutorial"]
+tags: ["fsharp", "paket", "tutorial"]
 ---
 
 ## Table of Contents
