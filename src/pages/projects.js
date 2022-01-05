@@ -7,14 +7,24 @@ const Projects = props => {
   return (
     <div>
       <Layout location={props.location}>
-        <h2 className="postTitle">Projects</h2> <br/>
+        <h2 className="postTitle">Projects</h2> <br />
         <ul>
           <li>
             <div>
-              <span><a href="https://github.com/karanveersp/CSEncryption">Cypher CLI</a></span>
+              <span><a href="https://github.com/karanveersp/CypherFS">CypherFS</a></span>
               <p>
-                A .NET Core CLI app to AES encrypt/decrypt plain text strings or files. <br/>
-                Useful for storing secrets to share securely.
+                An F# CLI app to AES encrypt/decrypt text data.<br />
+                Useful for storing passwords, and secrets, which can be backed up and shared securely.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <span><a href="https://github.com/karanveersp/Capstone">Cryptocurrency Price Forecaster</a></span>
+              <p>
+                A desktop app to analyze and forecast cryptocurrency prices using machine learning.<br />
+                Build with C#, ML.NET and Avalonia.
               </p>
             </div>
           </li>
