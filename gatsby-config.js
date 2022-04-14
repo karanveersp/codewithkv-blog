@@ -11,7 +11,7 @@ module.exports = {
     // siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       githubUrl: "http://github.com/karanveersp",
-      instagramUrl: "http://instagram.com/karanveer-art",
+      instagramUrl: "http://instagram.com/karanveer_art",
     },
   },
   plugins: [
