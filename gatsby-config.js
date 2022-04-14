@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Code with KV`,
-    author: 'Karanveer',
+    author: "Karanveer",
     description: `A Dev Blog.`,
     siteUrl: "http://codewithkv.com",
     // summary: `
@@ -10,8 +10,8 @@ module.exports = {
     // to share what I learn.`,
     // siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      githubUrl: 'http://github.com/karanveersp',
-      instagramUrl: 'http://instagram.com/karanveer41'
+      githubUrl: "http://github.com/karanveersp",
+      instagramUrl: "http://instagram.com/karanveer-art",
     },
   },
   plugins: [
@@ -42,7 +42,7 @@ module.exports = {
               ordered: false,
               fromHeading: 1,
               toHeading: 6,
-              className: "table-of-contents"
+              className: "table-of-contents",
             },
           },
           `gatsby-remark-autolink-headers`,
@@ -63,7 +63,7 @@ module.exports = {
             options: {
               classPrefix: "language-",
               noInlineHighlight: true,
-            }
+            },
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
@@ -102,10 +102,10 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/
-        }
-      }
-    }
+          include: /assets/,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
