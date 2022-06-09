@@ -157,7 +157,7 @@ with
 ```
 
 The two functions at the start do our heavy lifting.
-We create a simple pipelne from the command line argument to print the directory size.
+We create a simple pipeline from the command line argument to print the directory size.
 
 A `try...with` block is added to detect invalid directories. If the provided directory isn't found,
 the exception and stack trace are printed.
