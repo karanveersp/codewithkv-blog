@@ -17,38 +17,33 @@ tags: ["fsharp", "paket", "tutorial"]
 F# has a great dependency management tool called Paket.
 It's easy to setup and use, whether you're working with F# projects or F# scripts.
 
-In this blog post, we'll create a solution, and project from the ground up
-using Paket for dependency management. We'll then convert our F# cli app into a `.fsx` script.
+In this blog post, we'll create a solution, and project from the ground up using Paket for dependency management. We'll then convert our F# cli app into a `.fsx` script.
 
 You can find the completed code at this repository:
 https://github.com/karanveersp/paket-guide
 
 <br/>
 
-# Paket Overview
+## Paket Overview
 
 Paket is a dependency management tool similar to `npm` in node, and `pip` in python.
 It can be used to reference `NuGet` packages, files on GitHub, or any HTTP accessible file.
 
-With a few cli commands (outlined below), you can easily add and update dependencies for your
-F# project. While dependencies for F# projects are easy enough to manage using NuGet and IDE features,
+With a few cli commands (outlined below), you can easily add and update dependencies for your F# project. While dependencies for F# projects are easy enough to manage using NuGet and IDE features,
 managing dependencies for F# scripts is challenging.
 
-That's where I feel Paket really shines, and streamlines the process of acquiring and consuming libraries
-from `.fsx` scripts.
+That's where I feel Paket really shines, and streamlines the process of acquiring and consuming libraries from `.fsx` scripts.
 
 You can find the official docs here: https://fsprojects.github.io/Paket/
 
 <br/>
 
-# Initializing a Project
+## Initializing a Project
 
 We are going to create a solution and a project to compute and display the size of a given directory in gigabytes.
 It's a simple enough program which doesn't really need any external libraries to write.
 
-However, I found a nice library we can use to output colorful text using `printfn`.
-
-The library is located here: https://www.nuget.org/packages/BlackFox.ColoredPrintf/
+However, I found a nice library we can use to output colorful text using `printfn`. The library is located here: https://www.nuget.org/packages/BlackFox.ColoredPrintf/
 
 Basically, we'll output the result in one color, and any errors in red.
 
@@ -97,7 +92,7 @@ The following steps are pretty generic which can be referenced for initializing 
 
 <br/>
 
-# Paket Files
+## Paket Files
 
 There are three important files to be aware of to use Paket.
 
@@ -112,21 +107,23 @@ These three files should be committed into source control.
 
 <br/>
 
-# Commands Cheat Sheet
+## Commands Cheat Sheet
 
 The following table summarizes the most important commands.
 
-| Command                                                 | Description                                                                                                                                                                   |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dotnet paket install`                                  | Run after updating `paket.dependencies` file with new package references. Updates lock file, and refreshes all projects that specify paket dependencies to import references. |
-| `dotnet paket update`                                   | Updates references to latest versions of all dependent packages.                                                                                                              |
-| `dotnet paket restore`                                  | Takes current `paket.lock` file and updates all projects to reference correction versions of NuGet packages. Should be called by your build script.                           |
-| `dotnet paket outdated`                                 | List dependencies that have updates.                                                                                                                                          |
-| `dotnet paket generate-load-scripts --framework net6.0` | This command is used to generate _include scripts_ which can be loaded in `.fsx` files or F# interactive.                                                                     |
+| Command | Description |
+| ------- | ----------- |
+| `dotnet paket init` | Generate a new `paket.dependencies` file. |
+| `dotnet paket add` | Add a new dependency. By default, it is added to the solution, and then referenced from a project via a `paket.references` file. Creates a `paket.dependencies` file as well. |
+| `dotnet paket install` | Run after updating `paket.dependencies` file with new package references. Updates lock file, and refreshes all projects that specify paket dependencies to import references. |
+| `dotnet paket update` | Updates references to latest versions of all dependent packages. |
+| `dotnet paket restore` | Takes current `paket.lock` file and updates all projects to reference correction versions of NuGet packages. Should be called by your build script. |
+| `dotnet paket outdated` | List dependencies that have updates. |
+| `dotnet paket generate-load-scripts --framework net6.0` | This command is used to generate _include scripts_ which can be loaded in `.fsx` files or F# interactive. |
 
 <br/>
 
-# Directory Size App
+## Directory Size App
 
 We're going to write a simple app to print the size of a given directory.
 
@@ -156,15 +153,11 @@ with
 | :? DirectoryNotFoundException as ex -> printfn $"{ex}{ex.StackTrace}"
 ```
 
-The two functions at the start do our heavy lifting.
-We create a simple pipeline from the command line argument to print the directory size.
+The two functions at the start do our heavy lifting. We create a simple pipeline from the command line argument to print the directory size.
 
-A `try...with` block is added to detect invalid directories. If the provided directory isn't found,
-the exception and stack trace are printed.
+A `try...with` block is added to detect invalid directories. If the provided directory isn't found, the exception and stack trace are printed.
 
-It's a useful app but a bit boring! Some color ought to spice it up.
-
-Lets use Paket to add the following dependencies to our project.
+It's a useful app but a bit boring! Some color ought to spice it up. Lets use Paket to add the following dependencies to our project.
 
 ```
 dotnet paket add BlackFox.ColoredPrintf --version 1.0.5
@@ -174,6 +167,7 @@ dotnet paket add FSharp.Core --version 6.0.1
 This will add an entries to the `paket.dependencies` and `paket.references` files.
 
 You can remove the extra frameworks if you'd like to keep things minimalistic.
+
 The `paket.dependencies` file should look like this.
 
 ```
@@ -254,28 +248,22 @@ Lets run a test for the exception case. What a glorious wall of red...
 
 <br/>
 
-# Dependencies in Scripts
+## Dependencies in Scripts
 
 Managing dependencies for F# and C# projects is straightforward using the above commands.
 But what if you write some F# scripts (`.fsx` files) which need to use external packages?
-Those can be directly invoked using `dotnet fsi myscript.fsx` and are often sufficient
-for simple tasks that don't need the full project structure.
+Those can be directly invoked using `dotnet fsi myscript.fsx` and are often sufficient for simple tasks that don't need the full project structure.
 
-Paket offers a command to generate F# and C# _include scripts_ that
-reference installed packages. These _include scripts_ can be used in
-F# Interactive (FSI) or `.fsx` files to load packages.
+Paket offers a command to generate F# and C# _include scripts_ that reference installed packages. These _include scripts_ can be used in F# Interactive (FSI) or `.fsx` files to load packages.
 
 When the `dotnet paket generate-load-scripts` command is run, it creates `.fsx` files under `.paket/load/`.
 
-The generated load scripts reference DLLs from installed packages using `#r`
-preprocessing directives.
+The generated load scripts reference DLLs from installed packages using `#r` preprocessing directives.
 Those are tedious to write, and Paket helps us out here.
 
-The `dotnet paket generate-load-scripts` command only works after packages have been restored.
-But we don't want to keep re-running this command whenever we add a new package.
+The `dotnet paket generate-load-scripts` command only works after packages have been restored. But we don't want to keep re-running this command whenever we add a new package.
 
-To generate load scripts when installing packages, place `generate_load_scripts: true` at
-the top of the `paket.dependencies` file.
+To generate load scripts when installing packages, place `generate_load_scripts: true` at the top of the `paket.dependencies` file.
 
 ```
 generate_load_scripts: true
@@ -356,15 +344,13 @@ dotnet fsi DirSize.fsx C:\users\karan\csharp
 
 <br/>
 
-# Conclusion
+## Conclusion
 
 We've just built a project using Paket from scratch, and used a script to load a dependency.
 
-I know that when I got started using F# scripts, importing libraries was incredibly awkward.
-Using `pip` with Python was just smoother and easier, so I just gave up. Once I discovered Paket, I was able to take my F# scripts as far as any Python script.
+I know that when I got started using F# scripts, importing libraries was incredibly awkward. Using `pip` with Python was just smoother and easier, so I just gave up. Once I discovered Paket, I was able to take my F# scripts as far as any Python script.
 
-In this example, we've just gone through a basic example using NuGet, but I'm eager to explore the ability to reference
-files on GitHub and how easy that makes sharing libraries. Great topic for a future post.
+This was a basic example using NuGet, but I'm eager to explore the ability to reference files on GitHub and how easy that makes sharing libraries. Great topic for a future post.
 
 I hope that this blog post helps you become confident with using Paket and F#.
 
