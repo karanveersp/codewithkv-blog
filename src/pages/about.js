@@ -13,7 +13,7 @@ const About = props => {
           <br />
           My name is Karanveer, but you can call me KV.
           <br />
-          I'm a developer enthusiastic about web, desktop and blockchains apps as well as functional programming.
+          I'm a developer enthusiastic about web, desktop and blockchain apps as well as functional programming.
           <br />
           This blog is my effort to explore, organize and share my ideas about code.
           <br />
