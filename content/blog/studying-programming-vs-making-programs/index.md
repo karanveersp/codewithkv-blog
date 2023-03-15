@@ -33,9 +33,10 @@ practitioner in an enterprise company.
 The data-structures I used at work were simply what aligned most closely to the
 manner in which the data was used, without being super-concerned about
 efficiency or optimization. I used Lists, Dictionaries, Sets and Generators in
-Python, and just Lists and HashMaps in Java. Rarely did I need to implement a
-custom class or even a linked list for any program at work, because there simply
-wasn't the need for it.
+Python, and just Lists and HashMaps in Java. I sometimes needed to implement a
+custom class to encapsulate a set of behaviors and related data. But, oddly
+enough, I never needed my own linked list for any program at work, because there
+simply wasn't the need for it.
 
 Skill acquisition, from my own personal experience, is like a 3D spiral. In the
 horizontal dimension, you have the fundamentals of the craft and practical
